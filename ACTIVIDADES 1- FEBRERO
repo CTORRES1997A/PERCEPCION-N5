@@ -1,23 +1,20 @@
-var x = 200
-var vel = 2
-
 configuración de funciones () {
   createCanvas (400, 400);
 }
 
 función draw () {
   fondo (220);
-	elipse (x, 200,50,50);
-	
-	x = x + vel;
-	
-	si (x> 374) {
-		si (x = 50) {
-		x = x + vel * -1
+	if (mouseIsPressed) {
 		
-		
-		
-		console.log (x);
+		si (mouseX> 150) {
+			si (mouseX <250) {
+				if (mouseY> 150) {
+					si (mouseY <250) {
+						fondo (0,255,0);
+					}
+				}
+			}
+		}
 	}
-}
+rect (150,150,100,100);
 }
