@@ -1,0 +1,16 @@
+configuración de funciones () {
+	createCanvas (500, 500);
+}
+
+función draw () {
+	fondo (0);
+	para (var y = 5; y <= 495; y = y + 10) {
+
+		para (var x = 5; x <= 495; x = x + 10) {
+			elipse (x, y, 10, 10);
+		
+		}
+	}
+
+
+}
