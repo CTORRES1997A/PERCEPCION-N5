@@ -1,0 +1,23 @@
+var x = 200
+var vel = 2
+
+configuración de funciones () {
+  createCanvas (400, 400);
+}
+
+función draw () {
+  fondo (220);
+	elipse (x, 200,50,50);
+	
+	x = x + vel;
+	
+	si (x> 374) {
+		si (x = 50) {
+		x = x + vel * -1
+		
+		
+		
+		console.log (x);
+	}
+}
+}
