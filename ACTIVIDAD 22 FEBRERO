@@ -1,0 +1,59 @@
+
+var pelotas = [];
+
+configuración de funciones () {
+	createCanvas (400, 400);
+	para (var i = 0; i <100; i ++) {
+		pelotas [i] = nueva Pelota ();
+	}
+}
+
+función draw () {
+	fondo (0);
+	para (var i = 0; i <100; i ++) {
+	pelotas [i] .mostrar ();
+	pelotas [i] .mover ();
+	if (pelotas [i] .salir ()) {
+		pelotas [i] .rebotar ();
+	}
+	}
+
+// ******* Se crea la clase *********
+
+}
+clase pelota {
+	constructor () {
+		esto.x1 = 40;
+		this.y1 = 40;
+		this.velx = aleatorio (1,10);
+		this.vely = random (1,10);
+		this.posx = aleatorio (20, 380);
+		esto.posy = aleatorio (20, 380);
+		esto.R = aleatorio (200, 300);
+		esto.G = aleatorio (200, 300);
+		esto.B = aleatorio (200, 300);
+	}
+
+	mostrar () {
+		elipse (this.posx, this.posy, this.x1, this.y1);
+		llenar (this.R, this.G, this.B);
+	}
+	mover () {
+		this.posx = this.posx + this.velx;
+		this.posy = this.posy + this.vely;
+
+	}
+	salir () {
+		var res;
+		if (this.posx <20 || this.posx> width || this.posy <20 || this.posy> 380) {
+			res = verdadero
+		} else {
+			res = falso
+		}
+		volver res;
+	}
+	rebotar () {
+		this.velx = -this.velx
+		this.vely = -this.vely
+	}
+}
